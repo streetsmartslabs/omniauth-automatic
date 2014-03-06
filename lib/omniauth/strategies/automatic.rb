@@ -22,6 +22,10 @@ module OmniAuth
           end
         end
       end
+
+      def request_phase
+        redirect(client.auth_code.authorize_url(authorize_params.merge(request.params)))
+      end
     end
   end
 end
