@@ -27,7 +27,7 @@ module OmniAuth
         redirect(client.auth_code.authorize_url(authorize_params.merge(request.params)))
       end
 
-      uid { raw_info['user']['id'] }
+      uid { raw_info[:user][:id] }
 
       info do
         raw_info
