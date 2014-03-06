@@ -1,6 +1,6 @@
 # Omniauth Automatic Strategy
 
-OAuth2 strategy for `omniauth` and
+OAuth2 strategy for [`omniauth`](http://rubygems.org/gems/omniauth) and
 [Automatic](https://www.automatic.com/developer/).
 
 ## Installation
