@@ -3,7 +3,6 @@ require 'spec_helper'
 
 describe OmniAuth::Strategies::Automatic do
   let(:access_token) { double('AccessToken', options: {}) }
-  #let(:access_token) { double('AccessToken', OpenStruct.new(params: {})) }
   let(:parsed_response) { double('ParsedResponse') }
   let(:response) { double('Response', parsed: parsed_response) }
   let(:app) { lambda { |r| [200, '', ['Yo']] } }

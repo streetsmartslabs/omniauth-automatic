@@ -4,14 +4,13 @@ module OmniAuth
   module Strategies
     class Automatic < OmniAuth::Strategies::OAuth2
       option :name, "automatic"
+      option :scope, 'scope:location scope:vehicle scope:trip:summary scope:ignition:on scope:ignition:off scope:notification:speeding scope:notification:hard_brake scope:notification:hard_accel scope:region:changed scope:parking:changed scope:mil:on scope:mil:off'
 
       option :client_options, {
         :site          => 'https://api.automatic.com',
         :authorize_url => 'https://www.automatic.com/oauth/authorize',
         :token_url     => 'https://www.automatic.com/oauth/access_token'
       }
-
-      option :scope, 'scope:location scope:vehicle scope:trip:summary scope:ignition:on scope:ignition:off scope:notification:speeding scope:notification:hard_brake scope:notification:hard_accel scope:region:changed scope:parking:changed scope:mil:on scope:mil:off'
 
       def authorize_params
         super.tap do |params|
