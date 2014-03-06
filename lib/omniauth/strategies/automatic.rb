@@ -39,9 +39,18 @@ module OmniAuth
         }
       end
 
-
       def raw_info
         @raw_info ||= deep_symbolize(access_token.get.parsed)
+      end
+
+      def build_access_token
+        headers = {
+          :headers => {
+            'Authorization' => ("bearer %s" % [client.secret])
+          }
+        }
+        verifier = request.params['code']
+        client.auth_code.get_token(verifier, token_params.to_hash(symbolize_keys: true).merge(headers))
       end
     end
   end
