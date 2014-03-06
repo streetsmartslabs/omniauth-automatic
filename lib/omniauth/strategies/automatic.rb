@@ -26,6 +26,23 @@ module OmniAuth
       def request_phase
         redirect(client.auth_code.authorize_url(authorize_params.merge(request.params)))
       end
+
+      uid { raw_info['user']['id'] }
+
+      info do
+        raw_info
+      end
+
+      extra do
+        {
+          :raw_info => raw_info
+        }
+      end
+
+
+      def raw_info
+        @raw_info ||= deep_symbolize(access_token.params)
+      end
     end
   end
 end
