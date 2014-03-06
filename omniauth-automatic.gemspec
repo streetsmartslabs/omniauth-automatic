@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Omniauth::Automatic::VERSION
   spec.authors       = ["Nate Klaiber"]
   spec.email         = ["nate@theklaibers.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{ Strategy for Omniauth rubygem. }
+  spec.description   = %q{ OAuth2 Strategy for Omniauth and Automatic }
+  spec.homepage      = "https://github.com/nateklaiber/omniauth-automatic"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

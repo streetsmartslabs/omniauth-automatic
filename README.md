@@ -1,6 +1,7 @@
-# Omniauth::Automatic
+# Omniauth Automatic Strategy
 
-TODO: Write a gem description
+OAuth2 strategy for `omniauth` and
+[Automatic](https://www.automatic.com/developer/).
 
 ## Installation
 
