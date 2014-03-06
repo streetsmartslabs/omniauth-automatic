@@ -41,7 +41,7 @@ module OmniAuth
 
 
       def raw_info
-        @raw_info ||= deep_symbolize(access_token.params)
+        @raw_info ||= deep_symbolize(access_token.get.parsed)
       end
     end
   end
