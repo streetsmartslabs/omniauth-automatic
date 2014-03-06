@@ -27,15 +27,22 @@ module OmniAuth
         redirect(client.auth_code.authorize_url(authorize_params.merge(request.params)))
       end
 
-      uid { raw_info[:user][:id] }
-
-      info do
-        raw_info
+      uid do
+        raw_info[:user][:id].to_s
       end
 
-      extra do
+      info do
         {
-          :raw_info => raw_info
+          'name' => raw_info[:user][:id]
+        }
+      end
+
+      credentials do
+        {
+          :token         => raw_info[:access_token],
+          :refresh_token => raw_info[:refresh_token],
+          :expires_in    => raw_info[:expires_in],
+          :token_type    => raw_info[:token_type]
         }
       end
 
