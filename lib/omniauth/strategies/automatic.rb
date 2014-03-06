@@ -37,20 +37,6 @@ module OmniAuth
         }
       end
 
-      credentials do
-        {
-          :token         => raw_info[:access_token],
-          :refresh_token => raw_info[:refresh_token],
-          :expires_in    => raw_info[:expires_in],
-          :token_type    => raw_info[:token_type]
-        }
-      end
-
-      def auth_hash
-        raw_info
-        super
-      end
-
       def raw_info
         @raw_info ||= deep_symbolize(access_token.params)
       end
