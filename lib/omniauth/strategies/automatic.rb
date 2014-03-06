@@ -46,6 +46,11 @@ module OmniAuth
         }
       end
 
+      def auth_hash
+        raw_info
+        super
+      end
+
       def raw_info
         @raw_info ||= deep_symbolize(access_token.params)
       end
