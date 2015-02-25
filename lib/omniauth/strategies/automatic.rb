@@ -8,8 +8,8 @@ module OmniAuth
 
       option :client_options, {
         :site          => 'https://api.automatic.com',
-        :authorize_url => 'https://www.automatic.com/oauth/authorize',
-        :token_url     => 'https://www.automatic.com/oauth/access_token'
+        :authorize_url => 'https://accounts.automatic.com/oauth/authorize',
+        :token_url     => 'https://accounts.automatic.com/oauth/access_token'
       }
 
       def authorize_params
