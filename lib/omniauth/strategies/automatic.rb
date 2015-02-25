@@ -32,7 +32,10 @@ module OmniAuth
 
       info do
         {
-          'name' => raw_info[:user][:id]
+          'id'         => raw_info[:user][:id],
+          'first_name' => raw_info[:user][:first_name],
+          'last_name'  => raw_info[:user][:last_name],
+          'email'      => raw_info[:user][:email],
         }
       end
 
