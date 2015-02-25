@@ -20,11 +20,11 @@ describe OmniAuth::Strategies::Automatic do
     end
 
     it "returns the #authorize_url" do
-      expect(subject.options.client_options.authorize_url).to eq('https://www.automatic.com/oauth/authorize')
+      expect(subject.options.client_options.authorize_url).to eq('https://accounts.automatic.com/oauth/authorize')
     end
 
     it "returns the #token_url" do
-      expect(subject.options.client_options.token_url).to eq('https://www.automatic.com/oauth/access_token')
+      expect(subject.options.client_options.token_url).to eq('https://accounts.automatic.com/oauth/access_token')
     end
   end
 
@@ -79,7 +79,8 @@ describe OmniAuth::Strategies::Automatic do
 
   context "scope" do
     it "returns all scopes by default" do
-      expect(subject.options['scope']).to eq('scope:location scope:vehicle scope:trip:summary scope:ignition:on scope:ignition:off scope:notification:speeding scope:notification:hard_brake scope:notification:hard_accel scope:region:changed scope:parking:changed scope:mil:on scope:mil:off')
+      expect(subject.options['scope']).to eq('scope:public scope:user:profile scope:user:follow scope:location scope:current_location scope:vehicle:profile scope:vehicle:events scope:vehicle:vin scope:trip scope:behavior')
+
     end
 
     it "allows you to override the scopes" do
