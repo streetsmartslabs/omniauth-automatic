@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/nateklaiber/omniauth-automatic.png)](https://travis-ci.org/nateklaiber/omniauth-automatic)
 
 OAuth2 strategy for [`omniauth`](http://rubygems.org/gems/omniauth) and
-[Automatic](https://www.automatic.com/developer/).
+[Automatic](https://developer.automatic.com/).
 
 ## Installation
 
@@ -22,7 +22,7 @@ Or install it yourself as:
 ## Usage
 
 You first need to sign up for API access and then [register an
-application](https://www.automatic.com/developer/dashboard/).
+application](https://developer.automatic.com/dashboard/).
 
 ## Contributing
 
