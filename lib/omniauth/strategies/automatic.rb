@@ -27,28 +27,28 @@ module OmniAuth
       end
 
       uid do
-        user_params[:user][:id].to_s
+        user_params['user']['id'].to_s
       end
 
       info do
         {
-          'id'         => raw_info[:id],
-          'first_name' => raw_info[:first_name],
-          'last_name'  => raw_info[:last_name],
-          'email'      => raw_info[:email],
+          'id'         => raw_info['id'],
+          'first_name' => raw_info['first_name'],
+          'last_name'  => raw_info['last_name'],
+          'email'      => raw_info['email'],
         }
       end
 
       def raw_info
-        @raw_info ||= deep_symbolize(access_token.get(user_info_url).parsed)
+        @raw_info ||= access_token.get(user_info_url).parsed
       end
 
       def user_params
-        @user_params ||= deep_symbolize(access_token.params)
+        @user_params ||= access_token.params
       end
 
       def user_info_url
-        "/user/%s/" % [user_params[:user][:sid]]
+        "/user/%s/" % [user_params['user']['sid']]
       end
 
       protected
