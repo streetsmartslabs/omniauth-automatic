@@ -1,6 +1,7 @@
 # Omniauth Automatic Strategy
 
 [![Build Status](https://travis-ci.org/nateklaiber/omniauth-automatic.png)](https://travis-ci.org/nateklaiber/omniauth-automatic)
+[![Gem Version](https://badge.fury.io/rb/omniauth-automatic.svg)](http://badge.fury.io/rb/omniauth-automatic)
 
 OAuth2 strategy for [`omniauth`](http://rubygems.org/gems/omniauth) and
 [Automatic](https://developer.automatic.com/).
