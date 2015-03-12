@@ -10,15 +10,25 @@ OAuth2 strategy for [`omniauth`](http://rubygems.org/gems/omniauth) and
 
 Add this line to your application's Gemfile:
 
-    gem 'omniauth-automatic'
+```sh
+gem 'omniauth-automatic'
+```
 
 And then execute:
 
-    $ bundle
+```sh
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install omniauth-automatic
+```sh
+$ gem install omniauth-automatic
+```
+
+## Demo
+
+You can see a demo version of usage of this `gem` at: [http://automatic-omniauth-example.herokuapp.com/](http://automatic-omniauth-example.herokuapp.com/)
 
 ## Usage
 
