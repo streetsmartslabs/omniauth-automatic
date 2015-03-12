@@ -4,7 +4,7 @@ module OmniAuth
   module Strategies
     class Automatic < OmniAuth::Strategies::OAuth2
       option :name, "automatic"
-      option :scope, 'scope:public scope:user:profile scope:user:follow scope:location scope:current_location scope:vehicle:profile scope:vehicle:events scope:vehicle:vin scope:trip scope:behavior'
+      option :scope, 'scope:public scope:user:profile scope:location scope:vehicle:profile scope:vehicle:events scope:trip scope:behavior'
 
       option :client_options, {
         :site          => 'https://api.automatic.com',
@@ -27,20 +27,34 @@ module OmniAuth
       end
 
       uid do
-        raw_info[:user][:id].to_s
+        user_params[:user][:id].to_s
       end
 
       info do
         {
-          'id'         => raw_info[:user][:id],
-          'first_name' => raw_info[:user][:first_name],
-          'last_name'  => raw_info[:user][:last_name],
-          'email'      => raw_info[:user][:email],
+          'id'         => raw_info[:id],
+          'first_name' => raw_info[:first_name],
+          'last_name'  => raw_info[:last_name],
+          'email'      => raw_info[:email],
         }
       end
 
       def raw_info
-        @raw_info ||= deep_symbolize(access_token.params)
+        @raw_info ||= deep_symbolize(access_token.get(user_info_url).parsed)
+      end
+
+      def user_params
+        @user_params ||= deep_symbolize(access_token.params)
+      end
+
+      def user_info_url
+        "/user/%s/" % [user_params[:user][:sid]]
+      end
+
+      protected
+      def build_access_token
+        verifier = request.params['code']
+        client.auth_code.get_token(verifier, token_params.to_hash(:symbolize_keys => true), deep_symbolize(options.auth_token_params))
       end
     end
   end
