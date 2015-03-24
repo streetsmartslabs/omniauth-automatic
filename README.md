@@ -1,6 +1,6 @@
 # Omniauth Automatic Strategy
 
-[![Build Status](https://travis-ci.org/nateklaiber/omniauth-automatic.png)](https://travis-ci.org/nateklaiber/omniauth-automatic)
+[![Build Status](https://travis-ci.org/Automatic/omniauth-automatic.png)](https://travis-ci.org/Automatic/omniauth-automatic)
 [![Gem Version](https://badge.fury.io/rb/omniauth-automatic.svg)](http://badge.fury.io/rb/omniauth-automatic)
 
 OAuth2 strategy for [`omniauth`](http://rubygems.org/gems/omniauth) and
@@ -61,7 +61,7 @@ end
 
 ## Contributing
 
-1. Fork it ( http://github.com/nateklaiber/omniauth-automatic/fork )
+1. Fork it ( http://github.com/Automatic/omniauth-automatic/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

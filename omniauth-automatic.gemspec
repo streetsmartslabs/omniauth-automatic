@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["nate@theklaibers.com"]
   spec.summary       = %q{ OmniAuth strategy for Automatic. }
   spec.description   = %q{ OmniAuth strategy for Automatic. }
-  spec.homepage      = "https://github.com/nateklaiber/omniauth-automatic"
+  spec.homepage      = "https://github.com/Automatic/omniauth-automatic"
   spec.name          = "omniauth-automatic"
   spec.license       = "MIT"
 
