@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{ OmniAuth strategy for Automatic. }
   spec.homepage      = "https://github.com/Automatic/omniauth-automatic"
   spec.name          = "omniauth-automatic"
-  spec.license       = "MIT"
+  spec.license       = "Apache-2.0"
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
